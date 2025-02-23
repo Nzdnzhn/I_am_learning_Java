@@ -1,0 +1,18 @@
+package myfirstjava;
+
+public class Myfirstjava {
+
+	public static void main(String[] args) {
+		int numberOfItems= 100 ;
+		float costPerItem=15.86f ;
+		float totalCost= numberOfItems*costPerItem;
+		char currency='$';
+		
+		System.out.println("The number of items: "+numberOfItems);
+		System.out.println("The cost per items: "+costPerItem);
+		System.out.println("The total cost is: "+totalCost);
+
+	}
+
+}
+
