@@ -1,0 +1,27 @@
+package myfirstjava;
+import java.util.Scanner;
+public class week2labQ1{
+	public static void main(String[] args) {
+Scanner keyboard = new Scanner(System.in);
+        
+        System.out.print("Enter Integer x: ");
+        int x = keyboard.nextInt();
+        
+        System.out.print("Enter Integer y: ");
+        int y = keyboard.nextInt();
+        
+        double numerator = (3 * Math.pow(x, 3) * Math.pow(y, 3)) + (4 * x) - 9;
+        double denominator = (Math.pow(x, 3) * Math.pow(y, 3)) + (x * y);
+        
+        if (denominator == 0) {
+            System.out.println("Error: Division by zero.");
+        } else {
+            double result = numerator / denominator;
+            System.out.println("f(" + x + ", " + y + ") = " + result);
+        }
+        
+        keyboard.close();
+	}
+}
+
+
