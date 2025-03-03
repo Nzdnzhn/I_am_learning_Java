@@ -1,0 +1,23 @@
+package myfirstjava;
+import java.util.Scanner; 
+public class EvaluateFunction {
+	 public static void main(String[] args) {
+	 Scanner keyboard = new Scanner(System.in);
+	 
+		int x,y,z;
+	
+		System.out.println("Enter integer x:");
+		x= keyboard.nextInt();
+		System.out.println("Enter integer y:");
+		y= keyboard.nextInt();
+		System.out.println("Enter integer z:");
+		z= keyboard.nextInt();
+		
+		double functionF = (2*x-y)/(2*x+2*y)+20;
+		double functionG = (((double)(x*x)-(y*y))/(x+z))+(((x*x)+(z*z))/(y-z))+functionF; 
+		
+		System.out.println("f(" + x + ", " + y + ") = "+functionF);
+		System.out.println("g(" + x + ", " + y + ", " + z + ") = "+ Math.round(functionG));
+	}
+
+}
