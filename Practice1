@@ -1,0 +1,36 @@
+package myfirstjava;
+
+import java.util.Scanner;
+
+public class Week2LabQ2 {
+	public static void main(String[] args) {
+
+Scanner keyboard = new Scanner(System.in);
+        
+        double priceOfTomatoPerKg = 2.1;
+        double priceOfCucumberPerKg = 5.5;
+        double priceOfCarrotPerKg = 3.75;
+        double priceOfMintPerKg = 10.0;
+        
+        
+        System.out.print("Kg Of Tomatos: ");
+        double tomatoKg = keyboard.nextDouble();
+        
+        System.out.print("Kg Of Cucumber: ");
+        double cucumberKg = keyboard.nextDouble();
+        
+        System.out.print("Kg Of Carrot: ");
+        double carrotKg = keyboard.nextDouble();
+        
+        System.out.print("Kg Of Mint: ");
+        double mintKg = keyboard.nextDouble();
+        
+        double totalCost = (tomatoKg * priceOfTomatoPerKg) + (cucumberKg * priceOfCucumberPerKg) + 
+                           (carrotKg * priceOfCarrotPerKg) + (mintKg *priceOfMintPerKg);
+        
+        System.out.printf("Total price that the customer should pay is: %.2f TL\n", totalCost);
+        
+        keyboard.close();
+    }
+
+	}
