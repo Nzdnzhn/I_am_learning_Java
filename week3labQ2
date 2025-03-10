@@ -1,0 +1,29 @@
+package myfirstjava;
+import java.util.Scanner;
+public class Week3LabQ2 {
+	
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		String username,mood,extraInfo;
+		int subjectLine;
+
+		System.out.println("Enter your user name:");
+		username = keyboard.next();
+		System.out.println("Enter a short subject line:");
+		subjectLine = keyboard.nextInt();
+		System.out.println("Enter your mood (one word):");
+		mood = keyboard.next();
+		System.out.println("Enter a short piece of additional info:");
+		extraInfo = keyboard.next();
+		
+		
+		System.out.println("");
+		System.out.println("--- STATUS UPDATE ---");
+		System.out.println("User: "+username);
+		System.out.println("Subject: "+subjectLine);
+		System.out.println("Mood: "+mood);
+		System.out.println("Extra info: "+extraInfo);
+		System.out.println("---------------------");
+	}
+
+}
