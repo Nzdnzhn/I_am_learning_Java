@@ -1,0 +1,24 @@
+package myfirstjava;
+import java.util.Scanner;
+public class bank_balance {
+	public static final double overdrawnPenalty = 8.00;
+	public static final double interestRate= 0.02; //2%annually
+	public static void main(String[] args) {
+		Scanner keyboard= new Scanner(System.in);
+		
+		double balance;
+		System.out.print("Enter your checking account balance: $");
+		balance= keyboard.nextDouble();
+		System.out.println("Your original checking balance is "+ balance +"$" );
+		
+		if (balance >= 0)
+			balance = balance +(interestRate*balance)/12;
+		else
+			balance = balance - overdrawnPenalty;
+		
+		System.out.println("After adjusting for one month of interest and penalties,");
+		System.out.println("your new balance is "+ balance + "$");
+		
+	}
+
+}
