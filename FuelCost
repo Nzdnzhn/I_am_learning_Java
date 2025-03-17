@@ -1,0 +1,51 @@
+package myfirstjava;
+import java.util.Scanner;
+public class fuelCost {
+
+	public static void main(String[] args) {
+        @SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Engine type (p/d): ");
+        String engineType = scanner.next().toLowerCase();
+        
+        System.out.print("Age: ");
+        int age = scanner.nextInt();
+        
+        System.out.print("Distance: ");
+        int distance = scanner.nextInt();
+        
+        double fuelConsumption;
+        double fuelPrice;
+        
+      
+        if (engineType.equals("p")) {
+            fuelConsumption = 8.2;
+            fuelPrice = 12.0;
+        } else if (engineType.equals("d")) {
+            fuelConsumption = 6.5;
+            fuelPrice = 15.0; 
+        } else {
+            System.out.println("Engine type you entered is not valid.");
+            return;
+        }
+        
+        
+        double totalFuel = (distance / 100.0) * fuelConsumption;
+        double totalCost = totalFuel * fuelPrice;
+        
+        
+        if (age > 7 && age <= 14) {
+            totalCost *= 1.03; 
+        } else if (age > 14) {
+            totalCost *= 1.07; 
+        }
+        
+       
+        totalCost = Math.round(totalCost * 100.0) / 100.0;
+        
+        System.out.println("Total cost of fuel = " + totalCost + " TL");
+        
+       
+    }
+}
